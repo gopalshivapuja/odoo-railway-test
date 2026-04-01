@@ -36,7 +36,7 @@ def main():
             [[["name", "=", module_name]]]
         )
         if not module_ids:
-            print(f"  NOT FOUND - skipping")
+            print("  NOT FOUND - skipping")
             continue
 
         # Check current state
@@ -48,26 +48,26 @@ def main():
         print(f"  Current state: {state}")
 
         if state == "installed":
-            print(f"  Already installed - skipping")
+            print("  Already installed - skipping")
             continue
 
         # Install the module
-        print(f"  Installing... (this may take a minute)")
+        print("  Installing... (this may take a minute)")
         try:
             models.execute_kw(
                 db, uid, password, "ir.module.module",
                 "button_immediate_install", [module_ids]
             )
-            print(f"  INSTALLED successfully!")
+            print("  INSTALLED successfully!")
         except Exception as e:
             error_msg = str(e)
             if "timeout" in error_msg.lower() or "deadline" in error_msg.lower():
-                print(f"  Timeout during install - module may still be installing.")
-                print(f"  Waiting 30s before continuing...")
+                print("  Timeout during install - module may still be installing.")
+                print("  Waiting 30s before continuing...")
                 time.sleep(30)
             else:
                 print(f"  ERROR: {error_msg}")
-                print(f"  Continuing with next module...")
+                print("  Continuing with next module...")
 
         # Brief pause between installs
         time.sleep(2)

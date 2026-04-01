@@ -1087,7 +1087,7 @@ def make_service_page(title, tagline, intro, services, target_segments=None):
 
     segments_html = ""
     if target_segments:
-        segments_html = f"""
+        segments_html = """
 <section class="moar-section moar-section-gray">
     <div class="container">
         <div class="section-title">
@@ -1408,15 +1408,12 @@ def main():
         [[["name", "=", css_view_name]]]
     )
 
-    css_view_content = f"""<style>
-{CUSTOM_CSS}
-</style>"""
 
     if existing_views:
         models.execute_kw(
             db, uid, password, "ir.ui.view", "write",
             [existing_views, {
-                "arch_db": f"""<data>
+                "arch_db": """<data>
     <xpath expr="//head" position="before">
         <t t-call-assets="web.assets_frontend" t-js="false"/>
     </xpath>
@@ -1428,18 +1425,11 @@ def main():
     # Use website.page custom_css or inject via a simpler method
     # Let's create a dedicated view that injects into the frontend
     inject_view_name = "moar_custom_styles"
-    existing_inject = models.execute_kw(
+    models.execute_kw(
         db, uid, password, "ir.ui.view", "search",
         [[["name", "=", inject_view_name], ["type", "=", "qweb"]]]
     )
 
-    inject_arch = f"""<t t-name="moar_custom_styles">
-    <xpath expr="//head" position="inside">
-        <style type="text/css">
-{CUSTOM_CSS}
-        </style>
-    </xpath>
-</t>"""
 
     # Alternative approach: use website.assets_frontend to inject CSS
     # Find the website layout view and add CSS
@@ -1457,13 +1447,6 @@ def main():
             [[["key", "=", css_inherit_name]]]
         )
 
-        css_arch = f"""<t t-extend="website.layout">
-    <t t-jquery="head" t-operation="append">
-        <style type="text/css">
-{CUSTOM_CSS}
-        </style>
-    </t>
-</t>"""
 
         # Simpler approach using customize_show
         inherit_arch = f"""<data inherit_id="{layout_views[0]['id']}">
@@ -1510,7 +1493,7 @@ def main():
     if homepage_pages:
         view_id = homepage_pages[0]["view_id"][0]
         # Read current arch to understand structure
-        view_data = models.execute_kw(
+        models.execute_kw(
             db, uid, password, "ir.ui.view", "read",
             [[view_id], ["arch_db", "name"]]
         )
