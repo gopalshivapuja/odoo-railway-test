@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Backups and dumps
+backups/
+*.dump
+*.sql
+*.tar.gz
+
+# Odoo runtime
+odoo_data/
+filestore/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+.claude/
