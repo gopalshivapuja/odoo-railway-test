@@ -3,11 +3,11 @@
 
 import urllib.request
 import urllib.error
-import json
+import xmlrpc.client
 import re
 import ssl
 
-from common import connect_odoo, get_odoo_config
+from common import get_odoo_config
 
 URL, DB, USERNAME, PASSWORD = get_odoo_config()
 

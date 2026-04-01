@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Set up MOAR Advisory navigation menus in Odoo via XML-RPC."""
 
+import sys
+
 from common import connect_odoo
 
 
