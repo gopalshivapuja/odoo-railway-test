@@ -1,7 +1,7 @@
 {
     'name': 'MOAR Advisory Theme',
     'description': 'Custom theme for MOAR Advisory website — matches moaradvisory.com',
-    'category': 'Website/Theme',
+    'category': 'Website',
     'version': '19.0.1.0.0',
     'author': 'MOAR Advisory',
     'license': 'LGPL-3',
