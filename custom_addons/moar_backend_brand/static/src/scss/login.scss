@@ -1,0 +1,53 @@
+// MOAR Advisory — Login page branding
+// Loaded via web.assets_frontend (login page uses web.frontend_layout).
+
+$moar-navy: #1a2954;
+$moar-blue: #2575fc;
+$moar-purple: #6a11cb;
+
+// Full-page gradient background
+.oe_website_login_container,
+.oe_login_form_container {
+    background: linear-gradient(-35deg, $moar-blue, $moar-purple);
+    min-height: 100vh;
+}
+
+// Login card
+.oe_login_form {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    padding: 2rem;
+}
+
+// Primary button on login — pill shape is fine here
+.oe_login_buttons .btn-primary {
+    background-color: $moar-navy;
+    border-color: $moar-navy;
+    border-radius: 30px;
+    padding: 0.625rem 2rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+    &:hover, &:focus {
+        background-color: darken($moar-navy, 5%);
+        border-color: darken($moar-navy, 5%);
+    }
+}
+
+// Login page heading
+.oe_login_form h3,
+.oe_login_form .oe_login_form_header {
+    color: $moar-navy;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+// Links on login page
+.oe_login_form a {
+    color: $moar-blue;
+
+    &:hover {
+        color: darken($moar-blue, 10%);
+    }
+}

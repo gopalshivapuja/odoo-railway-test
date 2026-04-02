@@ -1,0 +1,14 @@
+// MOAR Advisory — Bootstrap variable overrides for the backend
+// Softer radius than the frontend (6px, not 30px pills) for dense form UIs.
+
+// Buttons — rounded but not pill-shaped
+$btn-border-radius: 0.375rem !default;        // 6px
+$btn-border-radius-sm: 0.25rem !default;       // 4px
+$btn-border-radius-lg: 0.5rem !default;        // 8px
+$btn-font-weight: 600 !default;
+
+// Cards
+$card-border-radius: 0.625rem !default;        // 10px
+
+// Body text
+$body-color: #333333 !default;
