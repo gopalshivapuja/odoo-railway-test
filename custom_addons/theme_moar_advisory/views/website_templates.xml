@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Load Poppins font via link tag (cannot use @import url() in SCSS bundles) -->
-    <template id="moar_head" inherit_id="website.layout" name="MOAR Head Assets">
-        <xpath expr="//head/meta[@charset]" position="after">
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
-        </xpath>
-    </template>
-
-    <!-- Add social icons to header right side -->
-    <template id="moar_social_icons" inherit_id="website.template_header_default" name="MOAR Social Icons">
-        <xpath expr="//ul[contains(@class,'flex-shrink-0')]" position="inside">
-            <li class="d-flex align-items-center gap-2 ms-2">
-                <a href="https://www.linkedin.com/company/moar-advisory/" target="_blank"
-                   class="btn rounded-circle p-0 d-flex align-items-center justify-content-center"
-                   style="background:#1a2954;color:#fff;width:36px;height:36px;min-width:36px;">
-                    <i class="fa fa-linkedin"/>
-                </a>
-                <a href="https://www.youtube.com/@MOARAdvisory" target="_blank"
-                   class="btn rounded-circle p-0 d-flex align-items-center justify-content-center"
-                   style="background:#1a2954;color:#fff;width:36px;height:36px;min-width:36px;">
-                    <i class="fa fa-youtube-play"/>
-                </a>
-            </li>
-        </xpath>
-    </template>
+    <!-- Template overrides are handled via JS (header_social.js) because
+         theme_ prefixed modules store templates as theme.ir.ui.view
+         which requires manual theme application via the website builder.
+         JS assets load directly through the manifest. -->
 </odoo>

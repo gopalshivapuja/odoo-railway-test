@@ -14,6 +14,7 @@
     'assets': {
         'web.assets_frontend': [
             'theme_moar_advisory/static/src/scss/theme.scss',
+            'theme_moar_advisory/static/src/js/header_social.js',
         ],
     },
 }
