@@ -27,3 +27,11 @@ filestore/
 .idea/
 .DS_Store
 .claude/
+
+# Screenshots and Playwright artifacts
+*.png
+!assets/*.png
+*.jpeg
+*.gif
+.playwright-mcp/
+.ruff_cache/

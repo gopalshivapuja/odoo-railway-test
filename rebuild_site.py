@@ -1056,24 +1056,24 @@ def main():
 
     # ── Step 2: Update Homepage ──
     print("\n=== UPDATING HOMEPAGE ===")
-    homepage_pages = models.execute_kw(
-        DB, uid, password, "website.page", "search_read",
-        [[["url", "=", "/"], ["website_id", "=", 1]]],
-        {"fields": ["id", "view_id"]}
+    # Find all homepage views and update the one Odoo actually serves
+    homepage_views = models.execute_kw(
+        DB, uid, password, "ir.ui.view", "search_read",
+        [[["key", "=", "website.homepage"]]],
+        {"fields": ["id", "website_id"], "order": "id"}
     )
-    if homepage_pages:
-        view_id = homepage_pages[0]["view_id"][0]
-        new_arch = f"""<t name="Homepage" t-name="website.homepage">
+    new_arch = f"""<t name="Homepage" t-name="website.homepage">
     <t t-call="website.layout">
         <t t-set="pageName" t-value="'homepage'"/>
-        <div id="wrap" class="oe_structure oe_empty">
+        <div id="wrap">
             {HOMEPAGE_HTML}
         </div>
     </t>
 </t>"""
+    for view in homepage_views:
         models.execute_kw(DB, uid, password, "ir.ui.view", "write",
-            [[view_id], {"arch_db": new_arch}])
-        print(f"  Updated homepage (view ID: {view_id})")
+            [[view["id"]], {"arch_db": new_arch}])
+        print(f"  Updated homepage view (ID: {view['id']}, website: {view['website_id']})")
 
     # ── Step 3: Update All Pages ──
     print("\n=== UPDATING ALL PAGES ===")
@@ -1090,7 +1090,7 @@ def main():
 
         view_arch = f"""<t name="{page_name}" t-name="website.page_{page_url.strip('/').replace('-','_').replace('/','_')}">
     <t t-call="website.layout">
-        <div id="wrap" class="oe_structure oe_empty">
+        <div id="wrap">
             {page_html}
         </div>
     </t>
