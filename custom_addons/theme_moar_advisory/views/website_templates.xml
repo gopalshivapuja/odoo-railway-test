@@ -10,8 +10,8 @@
     </template>
 
     <!-- Add social icons to header right side -->
-    <template id="moar_social_icons" inherit_id="website.layout" name="MOAR Social Icons">
-        <xpath expr="//nav[@aria-label='Main']//a[contains(@class,'btn_cta')]/ancestor::li[1]" position="after">
+    <template id="moar_social_icons" inherit_id="website.template_header_default" name="MOAR Social Icons">
+        <xpath expr="//ul[contains(@class,'flex-shrink-0')]" position="inside">
             <li class="d-flex align-items-center gap-2 ms-2">
                 <a href="https://www.linkedin.com/company/moar-advisory/" target="_blank"
                    class="btn rounded-circle p-0 d-flex align-items-center justify-content-center"
