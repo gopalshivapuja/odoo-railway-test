@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Inject Poppins font into the backend <head> -->
-    <template id="moar_backend_font" inherit_id="web.webclient_bootstrap"
-              name="MOAR Backend Poppins Font">
-        <xpath expr="//head" position="inside">
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com"
-                  crossorigin="anonymous"/>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&amp;display=swap"
-                  rel="stylesheet"/>
-        </xpath>
-    </template>
-
-    <!-- Inject Poppins font into the login / frontend layout too -->
-    <template id="moar_frontend_font" inherit_id="web.frontend_layout"
-              name="MOAR Frontend Poppins Font">
-        <xpath expr="//head" position="inside">
+    <!-- Inject Poppins font into the base layout <head>.
+         web.layout is the root template containing the actual <head> element.
+         Both backend (webclient_bootstrap) and frontend (frontend_layout)
+         inherit from web.layout, so this single injection covers all pages. -->
+    <template id="moar_poppins_font" inherit_id="web.layout"
+              name="MOAR Poppins Font">
+        <xpath expr="//head/meta[last()]" position="after">
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com"
                   crossorigin="anonymous"/>
