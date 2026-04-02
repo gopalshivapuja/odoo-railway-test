@@ -1,24 +1,41 @@
 // ============================================================
 // MOAR Advisory — Theme Styles
-// Custom component styles using Odoo color variables
+// Custom component styles
 // ============================================================
 
-// Brand shorthand variables
-$moar-navy: o-color('o-color-1');
-$moar-blue: o-color('o-color-2');
-$moar-light: o-color('o-color-3');
-$moar-white: o-color('o-color-4');
-$moar-dark: o-color('o-color-5');
-$moar-gradient: linear-gradient(-35deg, $moar-blue, #6a11cb);
+// Brand colors as plain variables
+$moar-navy: #1a2954;
+$moar-blue: #2575fc;
+$moar-light: #f7f8fa;
+$moar-white: #ffffff;
+$moar-gradient: linear-gradient(-35deg, #2575fc, #6a11cb);
 $moar-text: #333333;
 $moar-text-light: #555555;
 $moar-border: #e8e8e8;
+
+// ── Import Poppins Font ──
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
 
 // ── Global ──
 #wrapwrap {
     background: $moar-white;
     -webkit-font-smoothing: antialiased;
 }
+
+body, .o_website_page {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Poppins', sans-serif !important;
+    color: $moar-navy;
+}
+
+h1, .h1 { font-size: 50px; font-weight: 700; }
+h2, .h2 { font-size: 40px; font-weight: 500; }
+h3, .h3 { font-size: 22px; }
+h4, .h4 { font-size: 18px; }
 
 p {
     line-height: 1.8;
@@ -38,18 +55,9 @@ img {
     border-radius: 8px;
 }
 
-h2 {
-    font-weight: 500;
-    color: $moar-navy;
-}
-
-h1, h3, h4, h5, h6 {
-    color: $moar-navy;
-}
-
 // ── Header ──
 header .navbar {
-    background: $moar-white;
+    background: $moar-white !important;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
     border-bottom: 1px solid $moar-border;
 }
@@ -59,16 +67,17 @@ header .navbar-brand img {
 }
 
 header .nav-link {
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 600;
     font-size: 14px;
-    color: $moar-navy;
-    padding: 8px 14px;
+    color: $moar-navy !important;
+    padding: 8px 14px !important;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: color 0.3s ease;
 
     &:hover {
-        color: $moar-blue;
+        color: $moar-blue !important;
     }
 }
 
@@ -91,25 +100,25 @@ header .dropdown-item {
 
 // Hide Odoo header extras
 header .o_searchbar_form,
-header .js_change_lang,
 header .o_extra_menu_items,
-.o_header_phone,
-header a[href="/web/login"],
-header a[href="/my/home"],
-header .o_search_mobile_btn {
+header a[href="/web/login"] {
     display: none !important;
 }
 
 // ── Buttons ──
 .btn-primary {
-    background: $moar-navy;
-    border-color: $moar-navy;
-    color: #fff;
+    background: $moar-navy !important;
+    border-color: $moar-navy !important;
+    color: #fff !important;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 15px;
     letter-spacing: 0.3px;
 
     &:hover {
-        background: lighten($moar-navy, 8%);
-        border-color: lighten($moar-navy, 8%);
+        background: lighten($moar-navy, 8%) !important;
+        border-color: lighten($moar-navy, 8%) !important;
         transform: translateY(-1px);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
@@ -134,25 +143,25 @@ header .o_search_mobile_btn {
     }
 }
 
-.s_moar_btn_white {
-    background: #ffffff;
-    color: $moar-navy;
-    border: 1px solid #ccc;
-    padding: 10px 24px;
+.btn-gradient {
+    background: $moar-gradient !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 14px 36px;
     border-radius: 30px;
-    font-weight: 600;
-    font-size: 15px;
-    display: inline-block;
-    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
 
     &:hover {
-        background: $moar-navy;
-        color: #fff;
+        opacity: 0.92;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 117, 252, 0.3);
     }
 }
 
 // ── Hero Banner (image background) ──
-.s_moar_hero {
+.s_moar_hero,
+.moar-hero-img {
     position: relative;
     min-height: 580px;
     background-size: cover;
@@ -169,13 +178,14 @@ header .o_search_mobile_btn {
         z-index: 1;
     }
 
-    .container {
+    .container,
+    .hero-content {
         position: relative;
         z-index: 2;
     }
 
     h1 {
-        color: #ffffff;
+        color: #ffffff !important;
         font-size: 50px;
         font-weight: 700;
         margin-bottom: 18px;
@@ -192,13 +202,14 @@ header .o_search_mobile_btn {
 }
 
 // ── Hero Gradient (inner pages) ──
-.s_moar_hero_gradient {
+.s_moar_hero_gradient,
+.moar-hero-gradient {
     background: $moar-gradient;
     padding: 80px 0 60px;
     text-align: center;
 
     h1 {
-        color: #fff;
+        color: #fff !important;
         font-size: 42px;
         font-weight: 900;
         margin-bottom: 14px;
@@ -213,24 +224,30 @@ header .o_search_mobile_btn {
 }
 
 // ── Sections ──
-.s_moar_section {
+.s_moar_section,
+.moar-section {
     padding: 80px 0;
 }
 
-.s_moar_section_gray {
+.s_moar_section_gray,
+.moar-section-gray,
+.moar-section.moar-section-gray {
     background: $moar-light;
     padding: 80px 0;
 }
 
-.s_moar_section_dark {
+.s_moar_section_dark,
+.moar-section-dark,
+.moar-section.moar-section-dark {
     background: $moar-navy;
     padding: 80px 0;
 
-    h2, h3, h4 { color: #fff; }
+    h2, h3, h4 { color: #fff !important; }
     p { color: rgba(255, 255, 255, 0.78); }
 }
 
-.s_moar_section_title {
+.s_moar_section_title,
+.section-title {
     text-align: center;
     margin-bottom: 48px;
 
@@ -248,7 +265,8 @@ header .o_search_mobile_btn {
     }
 }
 
-.s_moar_subtitle {
+.s_moar_subtitle,
+.section-subtitle {
     display: inline-block;
     background: $moar-gradient;
     -webkit-background-clip: text;
@@ -262,7 +280,8 @@ header .o_search_mobile_btn {
 }
 
 // ── Cards ──
-.s_moar_card {
+.s_moar_card,
+.moar-card {
     background: #ffffff;
     border-radius: 10px;
     padding: 0;
@@ -277,14 +296,16 @@ header .o_search_mobile_btn {
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
     }
 
-    .s_moar_card_img {
+    .s_moar_card_img,
+    .card-img {
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-radius: 0;
     }
 
-    .s_moar_card_body {
+    .s_moar_card_body,
+    .card-body {
         padding: 28px;
     }
 
@@ -302,7 +323,8 @@ header .o_search_mobile_btn {
         margin-bottom: 12px;
     }
 
-    .s_moar_know_more {
+    .s_moar_know_more,
+    .know-more {
         color: $moar-blue;
         font-weight: 600;
         font-size: 14px;
@@ -317,7 +339,8 @@ header .o_search_mobile_btn {
 }
 
 // Text-only cards
-.s_moar_card_text {
+.s_moar_card_text,
+.moar-card-text {
     background: #ffffff;
     border-radius: 10px;
     padding: 32px 28px;
@@ -331,19 +354,13 @@ header .o_search_mobile_btn {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
 
-    h3 {
-        font-size: 19px;
-        margin-bottom: 12px;
-    }
-
-    p {
-        font-size: 15px;
-        color: $moar-text-light;
-    }
+    h3 { font-size: 19px; margin-bottom: 12px; }
+    p { font-size: 15px; color: $moar-text-light; }
 }
 
 // Dark cards (GCC section)
-.s_moar_card_dark {
+.s_moar_card_dark,
+.moar-card-dark {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 10px;
@@ -357,35 +374,31 @@ header .o_search_mobile_btn {
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
 
-    .s_moar_card_img {
+    .s_moar_card_img,
+    .card-img {
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-radius: 0;
     }
 
-    .s_moar_card_body {
+    .s_moar_card_body,
+    .card-body {
         padding: 24px;
     }
 
-    h3 {
-        color: #fff;
-        font-size: 19px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 15px;
-    }
+    h3 { color: #fff; font-size: 19px; margin-bottom: 10px; }
+    p { color: rgba(255, 255, 255, 0.75); font-size: 15px; }
 }
 
 // ── Stats ──
-.s_moar_stat {
+.s_moar_stat,
+.moar-stat {
     text-align: center;
     padding: 24px 16px;
 
-    .s_moar_stat_number {
+    .s_moar_stat_number,
+    .stat-number {
         font-size: 52px;
         font-weight: 900;
         background: $moar-gradient;
@@ -395,7 +408,8 @@ header .o_search_mobile_btn {
         line-height: 1.1;
     }
 
-    .s_moar_stat_label {
+    .s_moar_stat_label,
+    .stat-label {
         font-size: 15px;
         color: $moar-text-light;
         font-weight: 500;
@@ -404,7 +418,8 @@ header .o_search_mobile_btn {
 }
 
 // ── Team Cards ──
-.s_moar_team_card {
+.s_moar_team_card,
+.moar-team-card {
     text-align: center;
     background: #ffffff;
     border-radius: 10px;
@@ -418,14 +433,16 @@ header .o_search_mobile_btn {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .s_moar_team_photo {
+    .s_moar_team_photo,
+    .team-photo {
         width: 100%;
         height: 280px;
         object-fit: cover;
         object-position: top;
     }
 
-    .s_moar_team_info {
+    .s_moar_team_info,
+    .team-info {
         padding: 20px 16px 24px;
     }
 
@@ -436,14 +453,16 @@ header .o_search_mobile_btn {
         margin-bottom: 4px;
     }
 
-    .s_moar_team_role {
+    .s_moar_team_role,
+    .team-role {
         font-size: 13px;
         color: $moar-blue;
         font-weight: 600;
         margin-bottom: 8px;
     }
 
-    .s_moar_team_bio {
+    .s_moar_team_bio,
+    .team-bio {
         font-size: 13px;
         color: $moar-text-light;
         line-height: 1.6;
@@ -452,11 +471,13 @@ header .o_search_mobile_btn {
 }
 
 // ── Values ──
-.s_moar_value {
+.s_moar_value,
+.moar-value {
     text-align: center;
     padding: 36px 20px;
 
-    .s_moar_value_icon {
+    .s_moar_value_icon,
+    .value-icon {
         width: 64px;
         height: 64px;
         background: $moar-gradient;
@@ -469,17 +490,13 @@ header .o_search_mobile_btn {
         font-size: 26px;
     }
 
-    h4 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 8px;
-    }
-
+    h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
     p { font-size: 14px; }
 }
 
 // ── Industry Tags ──
-.s_moar_industry {
+.s_moar_industry,
+.moar-industry {
     background: #ffffff;
     border-radius: 10px;
     padding: 28px 16px;
@@ -494,25 +511,22 @@ header .o_search_mobile_btn {
         border-color: $moar-blue;
     }
 
-    .s_moar_industry_icon {
+    .s_moar_industry_icon,
+    .industry-icon {
         font-size: 36px;
         margin-bottom: 12px;
     }
 
-    h4 {
-        font-size: 15px;
-        font-weight: 700;
-        color: $moar-navy;
-        margin: 0;
-    }
+    h4 { font-size: 15px; font-weight: 700; color: $moar-navy; margin: 0; }
 }
 
 // ── Steps / Process ──
-.s_moar_step {
+.s_moar_step,
+.moar-step {
     text-align: center;
-    position: relative;
 
-    .s_moar_step_img {
+    .s_moar_step_img,
+    .step-img {
         width: 100%;
         height: 220px;
         object-fit: cover;
@@ -520,7 +534,8 @@ header .o_search_mobile_btn {
         margin-bottom: 20px;
     }
 
-    .s_moar_step_number {
+    .s_moar_step_number,
+    .step-number {
         width: 44px;
         height: 44px;
         background: $moar-gradient;
@@ -534,97 +549,37 @@ header .o_search_mobile_btn {
         font-weight: 700;
     }
 
-    h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
+    h3 { font-size: 20px; margin-bottom: 10px; }
     p { font-size: 15px; }
 }
 
 // ── CTA Banner ──
-.s_moar_cta {
+.s_moar_cta,
+.moar-cta {
     background: $moar-gradient;
     padding: 60px 0;
     text-align: center;
 
-    h2 {
-        color: #fff;
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
-
-    p {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 17px;
-        margin-bottom: 28px;
-    }
+    h2 { color: #fff !important; font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    p { color: rgba(255, 255, 255, 0.9); font-size: 17px; margin-bottom: 28px; }
 
     .btn {
-        background: #fff;
-        color: $moar-navy;
+        background: #fff !important;
+        color: $moar-navy !important;
         font-weight: 700;
         padding: 13px 36px;
         border-radius: 30px;
 
         &:hover {
-            background: $moar-navy;
-            color: #fff;
-        }
-    }
-}
-
-// ── Callback Bar ──
-.s_moar_callback {
-    background: $moar-navy;
-    padding: 40px 0;
-    border-radius: 12px;
-
-    h2 {
-        color: #fff;
-        font-size: 28px;
-        font-weight: 700;
-        margin: 0;
-    }
-
-    p {
-        color: rgba(255, 255, 255, 0.85);
-        margin: 0;
-    }
-
-    input[type="tel"] {
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        padding: 12px 16px;
-        width: 100%;
-
-        &::placeholder { color: rgba(255, 255, 255, 0.5); }
-        &:focus {
-            border-color: $moar-blue;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
-        }
-    }
-
-    .btn {
-        background: $moar-blue;
-        color: #fff;
-        padding: 12px 32px;
-        border-radius: 30px;
-        font-weight: 600;
-        border: none;
-
-        &:hover {
-            background: lighten($moar-blue, 5%);
+            background: $moar-navy !important;
+            color: #fff !important;
         }
     }
 }
 
 // ── Badge / Tag ──
-.s_moar_badge {
+.s_moar_badge,
+.moar-badge {
     display: inline-block;
     background: $moar-gradient;
     color: #fff;
@@ -636,64 +591,19 @@ header .o_search_mobile_btn {
     margin-bottom: 14px;
 }
 
-// ── FAQ Accordion ──
-.s_moar_faq {
-    .accordion-item {
-        border: 1px solid $moar-border;
-        border-radius: 8px;
-        margin-bottom: 12px;
-        overflow: hidden;
-    }
-
-    .accordion-button {
-        font-weight: 600;
-        font-size: 16px;
-        color: $moar-navy;
-        padding: 18px 24px;
-
-        &:not(.collapsed) {
-            background: $moar-light;
-            color: $moar-blue;
-        }
-
-        &:focus {
-            box-shadow: none;
-            border-color: $moar-border;
-        }
-    }
-
-    .accordion-body {
-        padding: 16px 24px;
-        font-size: 15px;
-        color: $moar-text-light;
-        line-height: 1.7;
-    }
-}
-
 // ── Footer ──
-footer,
-#footer,
-.o_footer {
-    background: $moar-navy;
+footer, #footer, .o_footer {
+    background: $moar-navy !important;
     color: rgba(255, 255, 255, 0.75);
     font-size: 14px;
 
-    h5 {
-        color: #fff;
-        font-weight: 700;
-        font-size: 16px;
-        margin-bottom: 16px;
-    }
-
-    a {
-        color: rgba(255, 255, 255, 0.65);
-        font-size: 14px;
-        &:hover { color: $moar-blue; }
-    }
+    h5 { color: #fff; font-weight: 700; font-size: 16px; margin-bottom: 16px; }
+    a { color: rgba(255, 255, 255, 0.65) !important; font-size: 14px; }
+    a:hover { color: $moar-blue !important; }
 }
 
 .o_footer_copyright {
-    background: $moar-navy;
+    background: $moar-navy !important;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -703,116 +613,26 @@ footer a[href*="odoo.com"],
     display: none !important;
 }
 
-// Social icons in footer
-.s_moar_social_icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: $moar-navy;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 16px;
-    margin-right: 8px;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background: $moar-blue;
-        border-color: $moar-blue;
-        color: #fff;
-    }
-}
-
-// Social icons in header
-.s_moar_header_social {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $moar-navy;
-    color: #fff;
-    font-size: 14px;
-    margin-left: 6px;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background: $moar-blue;
-        color: #fff;
-    }
-}
-
-// ── Contact Form ──
-.s_moar_form {
-    input,
-    textarea,
-    select {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px 14px;
-        font-size: 16px;
-        width: 100%;
-        margin-bottom: 14px;
-        transition: border-color 0.3s ease;
-        background: #fff;
-
-        &:focus {
-            border-color: $moar-blue;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.1);
-        }
-    }
-}
-
 // ── Odoo Overrides ──
-.oe_structure > section:first-child {
-    padding-top: 0;
-    margin-top: 0;
-}
-
-#wrap > section:first-child {
-    margin-top: 0;
-}
+.oe_structure > section:first-child { padding-top: 0 !important; margin-top: 0 !important; }
+#wrap > section:first-child { margin-top: 0 !important; }
 
 // ── Responsive ──
 @media (max-width: 991px) {
-    .s_moar_hero {
-        min-height: 400px;
-
-        h1 { font-size: 32px; }
-    }
-
-    h2 { font-size: 28px; }
-
-    .s_moar_section,
-    .s_moar_section_gray,
-    .s_moar_section_dark {
-        padding: 50px 0;
-    }
+    .s_moar_hero, .moar-hero-img { min-height: 400px; }
+    .s_moar_hero h1, .moar-hero-img h1 { font-size: 32px !important; }
+    h2, .h2 { font-size: 28px; }
+    .s_moar_section, .moar-section,
+    .s_moar_section_gray, .moar-section-gray,
+    .s_moar_section_dark, .moar-section-dark { padding: 50px 0; }
 }
 
 @media (max-width: 767px) {
-    .s_moar_hero {
-        min-height: 350px;
-
-        h1 { font-size: 28px; }
-        p { font-size: 16px; }
-    }
-
-    .s_moar_stat .s_moar_stat_number {
-        font-size: 36px;
-    }
-
-    .s_moar_section,
-    .s_moar_section_gray,
-    .s_moar_section_dark {
-        padding: 40px 0;
-    }
-
-    .s_moar_section_title {
-        margin-bottom: 30px;
-    }
+    .s_moar_hero, .moar-hero-img { min-height: 350px; }
+    .s_moar_hero h1, .moar-hero-img h1 { font-size: 28px !important; }
+    .s_moar_hero p, .moar-hero-img p { font-size: 16px; }
+    .s_moar_stat .s_moar_stat_number, .moar-stat .stat-number { font-size: 36px; }
+    .s_moar_section, .moar-section,
+    .s_moar_section_gray, .s_moar_section_dark { padding: 40px 0; }
+    .s_moar_section_title, .section-title { margin-bottom: 30px; }
 }
