@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inject Poppins font into the backend <head> -->
+    <template id="moar_backend_font" inherit_id="web.webclient_bootstrap"
+              name="MOAR Backend Poppins Font">
+        <xpath expr="//head" position="inside">
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com"
+                  crossorigin="anonymous"/>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&amp;display=swap"
+                  rel="stylesheet"/>
+        </xpath>
+    </template>
+
+    <!-- Inject Poppins font into the login / frontend layout too -->
+    <template id="moar_frontend_font" inherit_id="web.frontend_layout"
+              name="MOAR Frontend Poppins Font">
+        <xpath expr="//head" position="inside">
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com"
+                  crossorigin="anonymous"/>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&amp;display=swap"
+                  rel="stylesheet"/>
+        </xpath>
+    </template>
+
+</odoo>

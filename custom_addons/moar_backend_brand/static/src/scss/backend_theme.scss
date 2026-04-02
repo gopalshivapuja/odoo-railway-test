@@ -1,0 +1,222 @@
+// MOAR Advisory — Backend component styles
+// All rules scoped to .o_web_client to avoid bleeding into the website builder.
+
+// ──────────────────────────────────────────────
+// Brand tokens (local references)
+// ──────────────────────────────────────────────
+$moar-navy: #1a2954;
+$moar-blue: #2575fc;
+$moar-light: #f7f8fa;
+$moar-text: #333333;
+$moar-text-light: #555555;
+$moar-border: #e8e8e8;
+
+// ──────────────────────────────────────────────
+// Typography
+// ──────────────────────────────────────────────
+.o_web_client {
+    font-family: 'Poppins', sans-serif !important;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        color: $moar-navy;
+    }
+}
+
+// ──────────────────────────────────────────────
+// Main navbar
+// ──────────────────────────────────────────────
+.o_main_navbar {
+    background-color: $moar-navy !important;
+    font-family: 'Poppins', sans-serif;
+
+    .o_menu_brand {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .o_nav_entry {
+        color: rgba(255, 255, 255, 0.85);
+
+        &:hover, &:focus, &.focus {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .o_menu_systray .dropdown-toggle {
+        color: rgba(255, 255, 255, 0.85);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .o_menu_sections .o_nav_entry {
+        color: rgba(255, 255, 255, 0.85);
+
+        &:hover, &.active, &.show {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+
+// ──────────────────────────────────────────────
+// App menu sidebar
+// ──────────────────────────────────────────────
+.o_web_client .o_action_manager + .o_app_menu_sidebar,
+.o_app_menu_sidebar {
+    background-color: $moar-navy;
+
+    .o_nav_entry {
+        color: rgba(255, 255, 255, 0.8);
+
+        &:hover, &.active {
+            background-color: rgba($moar-blue, 0.2);
+            color: #fff;
+        }
+    }
+}
+
+// ──────────────────────────────────────────────
+// Control panel (breadcrumbs, search bar)
+// ──────────────────────────────────────────────
+.o_web_client .o_control_panel {
+    background-color: #fff;
+    border-bottom: 1px solid $moar-border;
+
+    .breadcrumb-item {
+        color: $moar-navy;
+        font-weight: 500;
+    }
+
+    .breadcrumb-item.active {
+        color: $moar-blue;
+    }
+
+    .o_searchview {
+        border-color: $moar-border;
+    }
+}
+
+// ──────────────────────────────────────────────
+// Action manager / content area background
+// ──────────────────────────────────────────────
+.o_web_client .o_action_manager {
+    background-color: $moar-light;
+}
+
+// ──────────────────────────────────────────────
+// List views
+// ──────────────────────────────────────────────
+.o_web_client .o_list_view {
+    thead th {
+        color: $moar-navy;
+        font-weight: 600;
+    }
+
+    .o_data_row:hover td {
+        background-color: rgba($moar-blue, 0.04);
+    }
+}
+
+// ──────────────────────────────────────────────
+// Form views
+// ──────────────────────────────────────────────
+.o_web_client .o_form_view {
+    .o_form_sheet {
+        border-radius: 10px;
+    }
+
+    // Status bar — only override active state color, not geometry
+    .o_statusbar_status .btn.o_arrow_button.disabled.o_arrow_button_current {
+        background-color: $moar-blue;
+        color: #fff;
+    }
+}
+
+// ──────────────────────────────────────────────
+// Kanban views
+// ──────────────────────────────────────────────
+.o_web_client .o_kanban_view {
+    .o_kanban_record {
+        border-radius: 10px;
+    }
+
+    .o_kanban_group_header {
+        color: $moar-navy;
+        font-weight: 600;
+    }
+}
+
+// ──────────────────────────────────────────────
+// Settings page
+// ──────────────────────────────────────────────
+.o_web_client .o_base_settings {
+    .app_settings_header {
+        background-color: $moar-navy;
+        color: #fff;
+    }
+}
+
+// ──────────────────────────────────────────────
+// Discuss / Chat
+// ──────────────────────────────────────────────
+.o_web_client .o-mail-ChatWindow-header {
+    background-color: $moar-navy;
+    color: #fff;
+}
+
+.o_web_client .o-mail-Discuss-sidebar {
+    background-color: $moar-light;
+}
+
+// ──────────────────────────────────────────────
+// Calendar
+// ──────────────────────────────────────────────
+.o_web_client .o_calendar_view {
+    .fc-event {
+        background-color: $moar-blue;
+        border-color: $moar-navy;
+    }
+}
+
+// ──────────────────────────────────────────────
+// Buttons — reinforce brand colors
+// ──────────────────────────────────────────────
+.o_web_client .btn-primary {
+    background-color: $moar-navy;
+    border-color: $moar-navy;
+
+    &:hover, &:focus, &:active {
+        background-color: darken($moar-navy, 5%);
+        border-color: darken($moar-navy, 5%);
+    }
+}
+
+.o_web_client .btn-secondary {
+    color: $moar-navy;
+
+    &:hover, &:focus {
+        color: $moar-blue;
+    }
+}
+
+// ──────────────────────────────────────────────
+// Links
+// ──────────────────────────────────────────────
+.o_web_client a:not(.btn) {
+    color: $moar-blue;
+
+    &:hover {
+        color: darken($moar-blue, 10%);
+    }
+}
+
+// ──────────────────────────────────────────────
+// Badges / tags
+// ──────────────────────────────────────────────
+.o_web_client .badge.text-bg-primary {
+    background-color: $moar-navy !important;
+}

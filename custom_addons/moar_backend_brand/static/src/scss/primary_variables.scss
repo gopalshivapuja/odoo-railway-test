@@ -1,0 +1,22 @@
+// MOAR Advisory — Primary brand variable overrides
+// These are loaded BEFORE Odoo's own defaults via ('prepend', ...) in the manifest.
+// Odoo uses !default everywhere, so the first definition wins.
+
+// Brand colors — replace Odoo purple with MOAR navy
+$o-community-color: #1a2954 !default;
+$o-brand-odoo: #1a2954 !default;
+$o-brand-primary: #1a2954 !default;
+$o-brand-secondary: #2575fc !default;
+$o-brand-lightsecondary: #f7f8fa !default;
+
+// Action / active-state accent
+$o-action: #2575fc !default;
+
+// Text
+$o-main-text-color: #333333 !default;
+$o-main-headings-color: #1a2954 !default;
+$o-main-link-color: #2575fc !default;
+
+// Backgrounds
+$o-webclient-background-color: #f7f8fa !default;
+$o-view-background-color: #ffffff !default;

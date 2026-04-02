@@ -6,22 +6,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 An Odoo 19.0 deployment for the MOAR Advisory website (moaradvisory.com), hosted on Railway. The repo contains a custom Odoo theme module (`theme_moar_advisory`) and Python XML-RPC automation scripts that configure the site content programmatically.
 
-## Local Development
+## Workflow
+
+**All changes go through PRs** — `main` is protected. Branch, commit, push, open PR, wait for CI, then merge.
 
 ```bash
-# Start Odoo + Postgres locally (http://localhost:8069)
-docker compose up --build
-
-# Rebuild just the Odoo container after theme changes
-docker compose up --build odoo
+git checkout -b feature/my-change
+# ... make changes ...
+git commit -m "Description"
+git push -u origin feature/my-change
+gh pr create --title "..." --body "..."
+# Wait for CI to pass, then merge
 ```
 
-Default local credentials: `odoo`/`odoo` for both DB user and database name.
-
-After container is running, install the theme module via Odoo Apps or:
-```bash
-python3 scripts/install_theme.py
-```
+**No local dev** — work targets Railway directly. The `docker-compose.yml` exists but is not actively used. All scripts run against Railway via XML-RPC using env vars from `.env`.
 
 ## CI
 
@@ -32,6 +30,10 @@ docker build -t odoo-custom:ci .  # Docker build check
 ```
 
 CI runs on all PRs and pushes to `main` (`.github/workflows/ci.yml`).
+
+## Screenshots and Artifacts
+
+**Never save screenshots or Playwright artifacts inside the repo.** Always use `/tmp/railway-screenshots/` for any browser screenshots, visual QA captures, or debugging images. The `.gitignore` blocks `*.png`, `*.jpeg`, `*.gif`, and `.playwright-mcp/` as a safety net.
 
 ## Architecture
 
@@ -61,6 +63,11 @@ Key scripts:
 ### Deployment
 
 Merging to `main` triggers Railway auto-deploy. Railway uses the `Dockerfile` (based on `odoo:19.0`) and `config/odoo.conf` for runtime configuration. The config uses env var interpolation for all secrets.
+
+Production URL: `https://odoo-production-26e2.up.railway.app`
+Health check: `GET /web/health` (returns 200 when healthy)
+
+Check status: `railway status` / `railway logs -n 20`
 
 ## Key Conventions
 

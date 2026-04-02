@@ -20,6 +20,8 @@ MODULES = [
     "website_forum",
     "website_sale",
     "website_membership",
+    # Backend branding
+    "moar_backend_brand",
 ]
 
 
