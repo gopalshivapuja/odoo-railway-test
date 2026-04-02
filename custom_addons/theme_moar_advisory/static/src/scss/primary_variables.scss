@@ -1,0 +1,44 @@
+// ============================================================
+// MOAR Advisory — Primary Variables
+// Maps brand identity to Odoo's color/font system
+// ============================================================
+
+$o-color-palettes: map-merge($o-color-palettes,
+    (
+        'moar-advisory': (
+            'o-color-1': #1a2954,    // Navy — primary brand, headings
+            'o-color-2': #2575fc,    // Blue — links, accents, CTAs
+            'o-color-3': #f7f8fa,    // Light gray — section backgrounds
+            'o-color-4': #ffffff,    // White — cards, page bg
+            'o-color-5': #1a2954,    // Dark — footer, dark sections
+        ),
+    )
+);
+
+$o-selected-color-palettes-names: append(
+    $o-selected-color-palettes-names, 'moar-advisory'
+);
+
+// Register Poppins font
+$o-theme-font-configs: (
+    'Poppins': (
+        'family': ('Poppins', sans-serif),
+        'url': 'Poppins:300,400,500,600,700,900',
+        'properties': (
+            'base': (
+                'font-size-base': 1rem,
+            ),
+        ),
+    ),
+);
+
+// Website values — apply palette + fonts
+$o-website-values-palettes: (
+    (
+        'color-palettes-name': 'moar-advisory',
+        'font': 'Poppins',
+        'headings-font': 'Poppins',
+        'navbar-font': 'Poppins',
+        'buttons-font': 'Poppins',
+    ),
+);

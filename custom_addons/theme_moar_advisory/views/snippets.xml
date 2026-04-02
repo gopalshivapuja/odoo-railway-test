@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================
+         MOAR Advisory — Custom Snippets / Building Blocks
+         Each snippet has data-snippet + data-name for builder support
+         ============================================================ -->
+
+    <!-- ── Hero Banner (image background) ── -->
+    <template id="s_moar_hero" name="MOAR Hero Banner">
+        <section class="s_moar_hero" data-snippet="s_moar_hero" data-name="MOAR Hero Banner"
+                 style="background-image: url('https://moaradvisory.com/wp-content/uploads/2025/10/MOAR-Advisory-partner-in-growth-Gcc-homepage-banner.webp');">
+            <div class="container">
+                <h1>Advice You Can Trust.<br/>Experience You Can Use.</h1>
+                <p>Expertise that helps organisations build stronger brands, cultures, and capabilities.</p>
+                <a href="/about" class="s_moar_btn_gradient">Discover Now</a>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Hero Gradient (inner pages) ── -->
+    <template id="s_moar_hero_gradient" name="MOAR Gradient Hero">
+        <section class="s_moar_hero_gradient" data-snippet="s_moar_hero_gradient" data-name="MOAR Gradient Hero">
+            <div class="container">
+                <h1>Page Title</h1>
+                <p>Page subtitle goes here</p>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── About + Stats ── -->
+    <template id="s_moar_about_stats" name="MOAR About with Stats">
+        <section class="s_moar_section" data-snippet="s_moar_about_stats" data-name="MOAR About with Stats">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="s_moar_subtitle">ABOUT MOAR ADVISORY</div>
+                        <h2>Your Partner in Growth</h2>
+                        <p>We go beyond traditional consulting by working alongside you to set up, scale and optimize your business. With deep expertise in GCC consulting, people advisory, and digital transformation, MOAR Advisory delivers results that matter.</p>
+                        <p>Headquartered in Bengaluru with a 200+ delivery team through Yitro Global, we blend advisory expertise with hands-on execution to help enterprises establish, operate, and scale global capability centers with measurable outcomes.</p>
+                        <a href="/about" class="btn btn-primary mt-3">Learn MOAR →</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="s_moar_stat">
+                                    <div class="s_moar_stat_number">200+</div>
+                                    <div class="s_moar_stat_label">Experienced Practitioners</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="s_moar_stat">
+                                    <div class="s_moar_stat_number">10+</div>
+                                    <div class="s_moar_stat_label">Industries Served</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="s_moar_stat">
+                                    <div class="s_moar_stat_number">5</div>
+                                    <div class="s_moar_stat_label">International Offices</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Services Grid ── -->
+    <template id="s_moar_services_grid" name="MOAR Services Grid">
+        <section class="s_moar_section_gray" data-snippet="s_moar_services_grid" data-name="MOAR Services Grid">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle">OUR OFFERINGS</div>
+                    <h2>Our Offerings</h2>
+                    <p>End-to-end advisory services for your strategic growth</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="s_moar_card">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/10/MOAR-Advisory-company-setup-and-finances.webp" alt="Company Setup &amp; Finance" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>Company Setup &amp; Finance</h3>
+                                <p>Simplified entry and scalable operations. We assist companies in establishing foundational frameworks for compliance, finance, and operations in new markets.</p>
+                                <a href="/company-setup-finance" class="s_moar_know_more">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="s_moar_card">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/09/HR-Talent-.webp" alt="People Advisory" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>People Advisory</h3>
+                                <p>Talent and people advisory services for global success. We create strong talent strategies, build leadership and shape company culture for growth.</p>
+                                <a href="/people-advisory" class="s_moar_know_more">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="s_moar_card">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2026/01/m-select-gcc-recruitment-services-moar-advisory-1.webp" alt="M-SELECT Recruitment" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>M-SELECT — Recruitment</h3>
+                                <p>Strategic recruitment that powers your GCC success. AI-driven insights, practitioner expertise, and dedicated account management.</p>
+                                <a href="/m-select" class="s_moar_know_more">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="s_moar_card">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/09/Employer-Branding-Communications.webp" alt="M-POWER Employer Branding" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>M-POWER — Employer Branding</h3>
+                                <p>Strategic communications that shape exceptional workplaces. We strengthen employer brands, attract talent, and deliver measurable impact.</p>
+                                <a href="/m-power" class="s_moar_know_more">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="s_moar_card">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/09/Technology-Digital-Transformation.webp" alt="Technology &amp; Digital" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>Technology &amp; Digital Transformation</h3>
+                                <p>Reimagining technology as a catalyst for enterprise growth. Modern IT architecture with strategic transformation for agility and resilience.</p>
+                                <a href="/technology-digital" class="s_moar_know_more">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="s_moar_card">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/10/MOAR-Advisory-People-Advisory-1.webp" alt="Advisory Services" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>Advisory Services</h3>
+                                <p>Helping companies set up, scale, and operate with the right insight and leadership in place. Research, planning, and experienced leadership.</p>
+                                <a href="/advisory-services" class="s_moar_know_more">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── GCC Section ── -->
+    <template id="s_moar_gcc_section" name="MOAR GCC Section">
+        <section class="s_moar_section_dark" data-snippet="s_moar_gcc_section" data-name="MOAR GCC Section">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle" style="-webkit-text-fill-color: rgba(255,255,255,0.6);">GLOBAL CAPABILITY CENTERS</div>
+                    <h2>Global Enterprise &amp; Capability Hubs</h2>
+                    <p>Comprehensive GCC solutions tailored to your growth stage</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="s_moar_card_dark">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/09/BOT-–-Build-Operate-Transfer.webp" alt="BOT" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>BOT — Build, Operate &amp; Transfer</h3>
+                                <p>We build and operate your GCC, then transfer full ownership once it's mature and self-sustaining. Ideal for low-risk market entry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="s_moar_card_dark">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/09/GCC-Global-Capability-Center-as-a-Service-e1774597756674.webp" alt="GCC as a Service" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>GCC as a Service</h3>
+                                <p>A fully managed model where we handle everything from infrastructure to talent, letting you focus on outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="s_moar_card_dark">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/09/Assisted-GCC.webp" alt="Assisted GCC" class="s_moar_card_img"/>
+                            <div class="s_moar_card_body">
+                                <h3>Assisted GCC</h3>
+                                <p>For organizations that want to own the journey but need expert guidance at every step. Strategic support with full control.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Industries ── -->
+    <template id="s_moar_industries" name="MOAR Industries">
+        <section class="s_moar_section" data-snippet="s_moar_industries" data-name="MOAR Industries">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle">INDUSTRIES</div>
+                    <h2>Industries We Serve</h2>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-lg-2 col-md-4 col-6"><div class="s_moar_industry"><div class="s_moar_industry_icon">&#x1F6D2;</div><h4>Retail</h4></div></div>
+                    <div class="col-lg-2 col-md-4 col-6"><div class="s_moar_industry"><div class="s_moar_industry_icon">&#x1F3ED;</div><h4>Manufacturing</h4></div></div>
+                    <div class="col-lg-2 col-md-4 col-6"><div class="s_moar_industry"><div class="s_moar_industry_icon">&#x1F4B0;</div><h4>Financial Services</h4></div></div>
+                    <div class="col-lg-2 col-md-4 col-6"><div class="s_moar_industry"><div class="s_moar_industry_icon">&#x1F3E5;</div><h4>Healthcare</h4></div></div>
+                    <div class="col-lg-2 col-md-4 col-6"><div class="s_moar_industry"><div class="s_moar_industry_icon">&#x2708;&#xFE0F;</div><h4>Aviation</h4></div></div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Values ── -->
+    <template id="s_moar_values" name="MOAR Values">
+        <section class="s_moar_section_gray" data-snippet="s_moar_values" data-name="MOAR Values">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle">OUR VALUES</div>
+                    <h2>The Way We Operate</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_value"><div class="s_moar_value_icon">&#x2728;</div><h4>Simplicity</h4><p>We cut through complexity to deliver clear, actionable guidance.</p></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_value"><div class="s_moar_value_icon">&#x1F3AF;</div><h4>Credibility</h4><p>Our practitioners bring deep industry experience you can trust.</p></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_value"><div class="s_moar_value_icon">&#x1F91D;</div><h4>Authenticity</h4><p>Genuine partnerships built on transparency and honest counsel.</p></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_value"><div class="s_moar_value_icon">&#x2705;</div><h4>Accountability</h4><p>We own outcomes and deliver on our commitments, every time.</p></div></div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Why MOAR ── -->
+    <template id="s_moar_why" name="MOAR Why Us">
+        <section class="s_moar_section" data-snippet="s_moar_why" data-name="MOAR Why Us">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle">WHY US</div>
+                    <h2>Why MOAR Advisory</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_card_text text-center"><h3>People, Trust &amp; Transparency</h3><p>Our relationships are built on openness and mutual respect.</p></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_card_text text-center"><h3>Practitioners, Not Consultants</h3><p>We work as an extension of your team with hands-on execution.</p></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_card_text text-center"><h3>Tailored Solutions</h3><p>No templates. Every engagement designed around your unique needs.</p></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_card_text text-center"><h3>Speed to Market</h3><p>Proven frameworks and execution speed to accelerate your timeline.</p></div></div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── How We Work (Process) ── -->
+    <template id="s_moar_process" name="MOAR Process">
+        <section class="s_moar_section_gray" data-snippet="s_moar_process" data-name="MOAR Process">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle">OUR PROCESS</div>
+                    <h2>How We Work</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="s_moar_step">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/10/MOAR-Advisory-Build-the-roadmap-scaled.webp" alt="Build the Roadmap" class="s_moar_step_img"/>
+                            <div class="s_moar_step_number">1</div>
+                            <h3>Build the Roadmap</h3>
+                            <p>We assess your needs, understand your goals, and create a strategic plan tailored to your growth objectives.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="s_moar_step">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/10/MOAR-Advisory-partner-in-execution-1.webp" alt="Partner in Execution" class="s_moar_step_img"/>
+                            <div class="s_moar_step_number">2</div>
+                            <h3>Partner in Execution</h3>
+                            <p>Our team embeds with yours, bringing expertise and capability to drive implementation at speed.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="s_moar_step">
+                            <img src="https://moaradvisory.com/wp-content/uploads/2025/10/MOAR-Advisory-deliver-and-execute.webp" alt="Deliver &amp; Sustain" class="s_moar_step_img"/>
+                            <div class="s_moar_step_number">3</div>
+                            <h3>Deliver &amp; Sustain</h3>
+                            <p>We ensure sustainable outcomes with ongoing support, knowledge transfer, and capability building.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Leadership Team ── -->
+    <template id="s_moar_team" name="MOAR Leadership Team">
+        <section class="s_moar_section" data-snippet="s_moar_team" data-name="MOAR Leadership Team">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle">OUR TEAM</div>
+                    <h2>Leadership Team</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/10/Mohith-Mohan-MOAR-Advisory-leadership-team-1024x1024.webp" alt="Mohith Mohan" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Mohith Mohan</h4><div class="s_moar_team_role">Founder &amp; CEO</div><p class="s_moar_team_bio">20+ years at Fidelity, Yahoo, Lowe's, HBC. Builds GCCs and employer brands.</p></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/09/Moar-advisory-Mukesh-Kedia-1024x1024.webp" alt="Mukesh Kedia" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Mukesh Kedia</h4><div class="s_moar_team_role">Co-Founder &amp; CFO</div><p class="s_moar_team_bio">19+ years at KPMG, HBC, Giant Eagle. Expertise in fundraising, M&amp;A, compliance.</p></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2026/01/Santosh-Gnanaprakash-MOAR-Advisory-1024x1024.webp" alt="Santosh Gnanaprakash" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Santosh Gnanaprakash</h4><div class="s_moar_team_role">General Counsel, Legal</div><p class="s_moar_team_bio">23+ years in litigation, consulting. ICSI member. GCC and ITeS expertise.</p></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/10/Anneka-Darashah-MOAR-Advisory-1024x1024.webp" alt="Anneka Darashah" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Anneka Darashah</h4><div class="s_moar_team_role">Head — People Advisory</div><p class="s_moar_team_bio">20+ years in global HR. Talent function scaling and team leadership.</p></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/11/Sonia-Sharma-MOAR-Advisory-1024x1024.webp" alt="Sonia Sharma" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Sonia Sharma</h4><div class="s_moar_team_role">Head — Marketing</div><p class="s_moar_team_bio">15+ years at ING, Marriott, Quess. Brand storytelling and digital strategy.</p></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/11/Rahul-Virk-MOAR-Advisory-1-1024x1024.webp" alt="Rahul Virk" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Rahul Virk</h4><div class="s_moar_team_role">Head, Talent Strategy — M Select</div><p class="s_moar_team_bio">20+ years in talent acquisition. GCC, technology, banking expertise.</p></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/09/Moar-advisory-Minoo-Verma-1024x1024.webp" alt="Minoo Verma" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Minoo Verma</h4><div class="s_moar_team_role">Head — Communications</div><p class="s_moar_team_bio">15+ years in employer branding, stakeholder engagement, digital strategy.</p></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/11/Harsha-Nandakumar-MOAR-Advisory-1024x1024.webp" alt="Harsha Nandakumar" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Harsha Nandakumar</h4><div class="s_moar_team_role">Director Programs &amp; Customer Success</div><p class="s_moar_team_bio">15+ years in digital commerce, marketplace ops. Hudson's Bay, Swiggy, Bigbasket.</p></div></div></div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Advisory Committee ── -->
+    <template id="s_moar_advisory_committee" name="MOAR Advisory Committee">
+        <section class="s_moar_section_gray" data-snippet="s_moar_advisory_committee" data-name="MOAR Advisory Committee">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <div class="s_moar_subtitle">ADVISORS</div>
+                    <h2>Our Advisors</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/12/Mahendra-Dhillon-MOAR-Advisory-1024x1024.webp" alt="Mahendra Dhillon" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Mahendra Dhillon</h4><div class="s_moar_team_role">Advisory Committee</div></div></div></div>
+                    <div class="col-lg-4 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/09/Gagan-ganpathy-MOAR-Advisory-2-1024x1024.webp" alt="Gagan Ganapathy" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Gagan Ganapathy</h4><div class="s_moar_team_role">Advisory Committee</div></div></div></div>
+                    <div class="col-lg-4 col-md-6"><div class="s_moar_team_card"><img src="https://moaradvisory.com/wp-content/uploads/2025/12/Tom-Ott-MOAR-Advisory-1024x1024.webp" alt="Tom Ott" class="s_moar_team_photo"/><div class="s_moar_team_info"><h4>Tom Ott</h4><div class="s_moar_team_role">Advisory Committee</div></div></div></div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── CTA Banner ── -->
+    <template id="s_moar_cta" name="MOAR CTA Banner">
+        <section class="s_moar_cta" data-snippet="s_moar_cta" data-name="MOAR CTA Banner">
+            <div class="container">
+                <h2>Ready to Scale Your Business?</h2>
+                <p>Talk to our experts and explore faster ways to grow.</p>
+                <a href="/contactus" class="btn btn-lg">Get in Touch</a>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── FAQ Accordion ── -->
+    <template id="s_moar_faq" name="MOAR FAQ">
+        <section class="s_moar_section" data-snippet="s_moar_faq" data-name="MOAR FAQ">
+            <div class="container">
+                <div class="s_moar_section_title">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="s_moar_faq accordion" id="moarFAQ">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What is a GCC and how can MOAR Advisory help?</button></h3>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#moarFAQ"><div class="accordion-body">A Global Capability Center (GCC) is a strategic offshore unit that drives innovation, technology, and business processes. MOAR Advisory helps organizations establish, operate, and scale GCCs with end-to-end advisory covering setup, talent, technology, and compliance.</div></div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What industries does MOAR Advisory serve?</button></h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#moarFAQ"><div class="accordion-body">We serve retail, manufacturing, financial services, healthcare, aviation, and technology sectors — bringing deep domain expertise to each engagement.</div></div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">How does MOAR Advisory differ from traditional consulting firms?</button></h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#moarFAQ"><div class="accordion-body">We are practitioners, not consultants. Our team embeds with yours and drives hands-on execution — not just recommendations. We combine advisory expertise with operational delivery for measurable outcomes.</div></div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">How does MOAR Advisory offer advisory &amp; GCC integrated services?</button></h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#moarFAQ"><div class="accordion-body">We provide a full spectrum of services from feasibility studies and location advisory through to company setup, talent acquisition, employer branding, and technology transformation — all integrated under one advisory partnership.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ── Get a Call Back Bar ── -->
+    <template id="s_moar_callback" name="MOAR Callback Bar">
+        <section class="s_moar_section" data-snippet="s_moar_callback" data-name="MOAR Callback Bar">
+            <div class="container">
+                <div class="s_moar_callback">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3">
+                                <h2>Get a Call Back</h2>
+                            </div>
+                            <div class="col-lg-4">
+                                <p>Talk to our experts and explore faster ways to scale your business.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="tel" placeholder="Phone" aria-label="Phone number"/>
+                            </div>
+                            <div class="col-lg-2">
+                                <a href="/contactus" class="btn">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================
+         Register Snippets in Website Builder Panel
+         ============================================================ -->
+    <template id="moar_snippets" inherit_id="website.snippets" name="MOAR Advisory Snippets">
+        <xpath expr="//*[@id='default_snippets']" position="before">
+            <t id="x_moar_snippets">
+                <div id="x_moar_snippets_category" class="o_panel">
+                    <div class="o_panel_header">MOAR Advisory</div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_moar_advisory.s_moar_hero" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_hero.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_hero_gradient" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_hero_gradient.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_about_stats" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_about_stats.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_services_grid" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_services_grid.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_gcc_section" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_gcc_section.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_industries" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_industries.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_values" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_values.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_why" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_why.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_process" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_process.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_team" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_team.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_advisory_committee" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_advisory_committee.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_cta" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_cta.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_faq" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_faq.svg"/>
+                        <t t-snippet="theme_moar_advisory.s_moar_callback" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_callback.svg"/>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
