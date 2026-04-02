@@ -98,11 +98,48 @@ header .dropdown-item {
     }
 }
 
-// Hide Odoo header extras
+// Hide Odoo header extras (match reference: no HOME, search, phone, sign-in)
 header .o_searchbar_form,
-header .o_extra_menu_items,
-header a[href="/web/login"] {
+header a[data-bs-target="#o_search_modal"],
+header a[href="/web/login"],
+header .o_no_autohide_item,
+header .s_text_block:has(a[href^="mailto:"]),
+header .s_text_block:has(.fa-phone) {
     display: none !important;
+}
+
+// Hide HOME nav link (reference doesn't have it)
+#top_menu > li.nav-item:first-child > a[href="/"] {
+    display: none !important;
+}
+#top_menu > li.nav-item:first-child {
+    display: none !important;
+}
+
+// Show overflow menu items inline instead of in "+" dropdown
+header .o_extra_menu_items > .dropdown-toggle {
+    display: none !important;
+}
+header .o_extra_menu_items > .dropdown-menu {
+    display: flex !important;
+    position: static !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0;
+}
+header .o_extra_menu_items > .dropdown-menu > li > a {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    font-size: 14px;
+    color: $moar-navy !important;
+    padding: 8px 14px !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    &:hover { color: $moar-blue !important; background: transparent !important; }
 }
 
 // ── Buttons ──
@@ -607,9 +644,10 @@ footer, #footer, .o_footer {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-// Hide "Powered by Odoo"
+// Hide "Powered by Odoo" and default copyright
 footer a[href*="odoo.com"],
-.o_footer_copyright a[href*="odoo.com"] {
+.o_footer_copyright a[href*="odoo.com"],
+.o_footer_copyright {
     display: none !important;
 }
 
