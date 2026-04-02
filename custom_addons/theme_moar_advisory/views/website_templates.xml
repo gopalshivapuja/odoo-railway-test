@@ -8,4 +8,22 @@
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
         </xpath>
     </template>
+
+    <!-- Add social icons to header right side -->
+    <template id="moar_social_icons" inherit_id="website.layout" name="MOAR Social Icons">
+        <xpath expr="//nav[@aria-label='Main']//a[contains(@class,'btn_cta')]/ancestor::li[1]" position="after">
+            <li class="d-flex align-items-center gap-2 ms-2">
+                <a href="https://www.linkedin.com/company/moar-advisory/" target="_blank"
+                   class="btn rounded-circle p-0 d-flex align-items-center justify-content-center"
+                   style="background:#1a2954;color:#fff;width:36px;height:36px;min-width:36px;">
+                    <i class="fa fa-linkedin"/>
+                </a>
+                <a href="https://www.youtube.com/@MOARAdvisory" target="_blank"
+                   class="btn rounded-circle p-0 d-flex align-items-center justify-content-center"
+                   style="background:#1a2954;color:#fff;width:36px;height:36px;min-width:36px;">
+                    <i class="fa fa-youtube-play"/>
+                </a>
+            </li>
+        </xpath>
+    </template>
 </odoo>
