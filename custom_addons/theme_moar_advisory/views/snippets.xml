@@ -386,33 +386,6 @@
         </section>
     </template>
 
-    <!-- ============================================================
-         Register Snippets in Website Builder Panel
-         ============================================================ -->
-    <template id="moar_snippets" inherit_id="website.snippets" name="MOAR Advisory Snippets">
-        <xpath expr="//*[@id='default_snippets']" position="before">
-            <t id="x_moar_snippets">
-                <div id="x_moar_snippets_category" class="o_panel">
-                    <div class="o_panel_header">MOAR Advisory</div>
-                    <div class="o_panel_body">
-                        <t t-snippet="theme_moar_advisory.s_moar_hero" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_hero.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_hero_gradient" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_hero_gradient.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_about_stats" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_about_stats.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_services_grid" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_services_grid.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_gcc_section" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_gcc_section.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_industries" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_industries.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_values" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_values.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_why" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_why.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_process" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_process.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_team" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_team.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_advisory_committee" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_advisory_committee.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_cta" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_cta.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_faq" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_faq.svg"/>
-                        <t t-snippet="theme_moar_advisory.s_moar_callback" t-thumbnail="/theme_moar_advisory/static/src/img/wbuilder/s_moar_callback.svg"/>
-                    </t>
-                </div>
-            </t>
-        </xpath>
-    </template>
+    <!-- Snippet panel registration will be added after initial deployment -->
 
 </odoo>
