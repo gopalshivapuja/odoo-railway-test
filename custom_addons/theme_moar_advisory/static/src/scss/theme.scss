@@ -13,8 +13,8 @@ $moar-text: #333333;
 $moar-text-light: #555555;
 $moar-border: #e8e8e8;
 
-// ── Import Poppins Font ──
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+// Poppins font loaded via <link> tag in website_templates.xml
+// Do NOT use @import url() here — it breaks Odoo's bundled CSS output
 
 // ── Global ──
 #wrapwrap {
@@ -117,8 +117,8 @@ header a[href="/web/login"] {
     letter-spacing: 0.3px;
 
     &:hover {
-        background: lighten($moar-navy, 8%) !important;
-        border-color: lighten($moar-navy, 8%) !important;
+        background: #2a3d6e !important;
+        border-color: #2a3d6e !important;
         transform: translateY(-1px);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }

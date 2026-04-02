@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Header and footer styling handled via theme.scss -->
-    <!-- Structural template overrides will be added after initial deployment -->
+    <!-- Load Poppins font via link tag (cannot use @import url() in SCSS bundles) -->
+    <template id="moar_head" inherit_id="website.layout" name="MOAR Head Assets">
+        <xpath expr="//head/meta[@charset]" position="after">
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+        </xpath>
+    </template>
 </odoo>
